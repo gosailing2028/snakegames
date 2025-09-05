@@ -1,0 +1,129 @@
+:root {
+  --primary-color: #3498db;
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
+  --container-bg: #ffffff;
+  --border-color: #bdc3c7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  text-align: center;
+  background-color: var(--container-bg);
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game-canvas {
+  background-color: #fff;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.game-controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.score-container, .speed-container {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.speed-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#speed-control {
+  margin-left: 10px;
+  width: 150px;
+}
+
+.mobile-controls {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mobile-controls div {
+  display: flex;
+}
+
+.mobile-controls button {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 28px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#start-button,
+#pause-button {
+  margin-top: 10px;
+  padding: 12px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#start-button:hover,
+#pause-button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 600px) {
+  .mobile-controls {
+    display: flex;
+  }
+
+  .game-controls button:not(.mobile-controls button) {
+    display: none;
+  }
+
+  #start-button,
+  #pause-button {
+    display: block;
+  }
+}

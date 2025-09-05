@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Snake Game</h1>
+      <div class="game-container">
+        <canvas id="game-canvas" width="400" height="400"></canvas>
+        <div class="game-controls">
+          <div class="score-container">
+            <span>Score:</span>
+            <span id="score">0</span>
+          </div>
+          <div class="speed-container">
+            <label for="speed-control">Speed:</label>
+            <input type="range" id="speed-control" min="50" max="250" value="150" step="50">
+          </div>
+          <div class="mobile-controls">
+            <button id="up-button">↑</button>
+            <div>
+              <button id="left-button">←</button>
+              <button id="right-button">→</button>
+            </div>
+            <button id="down-button">↓</button>
+          </div>
+          <button id="start-button">Start Game</button>
+          <button id="pause-button">Pause</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
